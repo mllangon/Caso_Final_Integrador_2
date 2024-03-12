@@ -23,17 +23,17 @@ public class Aves extends Animales {
 
     @Override
     public void comer() {
-        System.out.println("El" + nombre + " está comiendo. Dieta: " + alimentacion);
+        System.out.println("El " + nombre + " está comiendo. Dieta: " + alimentacion);
     }
 
     @Override
     public void dormir() {
-        System.out.println("El" +nombre + " está durmiendo.");
+        System.out.println("El " + nombre + " está durmiendo.");
     }
 
     @Override
     public void moverse() {
-        System.out.println("El" +nombre + " está volando.");
+        System.out.println("El " + nombre + " está volando.");
     }
 
     @Override
@@ -42,6 +42,6 @@ public class Aves extends Animales {
     }
 
     public void tipoPlumas() {
-        System.out.println("El" +nombre + " tiene plumaje " + tipoPlumas);
+        System.out.println("El " +nombre + " tiene plumaje " + tipoPlumas);
     }
 }

@@ -7,10 +7,12 @@ public class RegistroAcceso {
     static {
         ENTRADA = new RegistroAcceso();
         ENTRADA.setHoraEntrada("10:00");
-        ENTRADA.setUsuario("Acceso permitidp");
+        ENTRADA.setUsuario("Acceso permitido");
+        ENTRADA.setUbicacion("Puertas de entrada");
         SALIDA = new RegistroAcceso();
         SALIDA.setHoraSalida("19:00");
         SALIDA.setUsuario("Acceso permitido");
+        SALIDA.setUbicacion("Puertas de salida");
 
     }
 

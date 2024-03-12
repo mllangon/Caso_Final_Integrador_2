@@ -266,9 +266,11 @@ public class Main {
                             String zonaRayosX = scanner.nextLine();
                             switch (zonaRayosX.toLowerCase()) {
                                 case "entrada":
+                                    System.out.println("La ubicacion de la zona de entrada es: " + RayosX.ENTRADA.getUbicacion());
                                     System.out.println("El estado de la zona de entrada es: " + RayosX.ENTRADA.getEstado());
                                     break;
                                 case "salida":
+                                    System.out.println("La ubicacion de la zona de salida es: " + RayosX.SALIDA.getUbicacion());
                                     System.out.println("El estado de la zona de salida es: " + RayosX.SALIDA.getEstado());
                                     break;
                                 default:
@@ -282,9 +284,11 @@ public class Main {
                             String zonaCamara = scanner.nextLine();
                             switch (zonaCamara.toLowerCase()) {
                                 case "interior":
+                                    System.out.println("La ubicacion de la zona interior es: " + Camara.INTERIOR.getUbicacion());
                                     System.out.println("El estado de la zona interior es: " + Camara.INTERIOR.getEstado());
                                     break;
                                 case "exterior":
+                                    System.out.println("La ubicacion de la zona exterior es: " + Camara.EXTERIOR.getUbicacion());
                                     System.out.println("El estado de la zona exterior es: " + Camara.EXTERIOR.getEstado());
                                     break;
                                 default:

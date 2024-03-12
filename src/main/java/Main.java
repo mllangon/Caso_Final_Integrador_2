@@ -16,6 +16,7 @@ import Visitantes.GuiaAcuaticos;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String continuar;
 
         System.out.println("¿Eres staff o visitante?");
         String userType = scanner.nextLine();
@@ -271,13 +272,11 @@ public class Main {
                         System.out.println("Guía no reconocida.");
                         break;
                 }
-                if (!guiaElegida.equalsIgnoreCase("salir")) {
-                    System.out.println("¡Espero que hayas disfrutado tu recorrido!");
-                } else {
-                    System.out.println("Tipo de usuario no reconocido.");
-                }
+                System.out.println("¿Deseas ver otro animal o cambiar de especie? (si/no)");
+                continuar = scanner.nextLine().toLowerCase();
+            } while (continuar.equals("si"));
 
-                scanner.close();
-            }
+            scanner.close();
         }
     }
+}

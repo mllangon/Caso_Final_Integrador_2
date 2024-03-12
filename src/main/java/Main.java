@@ -32,7 +32,7 @@ public class Main {
 
             if (staffChoice.equalsIgnoreCase("seguimiento")) {
                 do {
-                    System.out.println("Elige una opció para hacer el seguimiento:Recursos, Terrario, Acuático, Aciario, Herpetario, insectario o escriba salir para terminar.");
+                    System.out.println("Elige una opció para hacer el seguimiento:Recursos, Terrario, Acuático, Aviario, Herpetario, insectario o escriba salir para terminar.");
                     String habitatElegido = scanner.nextLine();
 
                     switch (habitatElegido.toLowerCase()) {
@@ -168,6 +168,77 @@ public class Main {
                             }
                             break;
                         case "recursos":
+                            System.out.println("Los recursos disponibles son: Comida, Medicinas, Juguetes");
+                            System.out.println("¿De qué recurso quieres hacer el seguimiento?");
+                            String recurso = scanner.nextLine();
+                            switch (recurso.toLowerCase()) {
+                                case "comida":
+                                    System.out.println("Los recursos de comida disponibles son: Carne, Pescado, Fruta");
+                                    System.out.println("¿De qué recurso de comida quieres hacer el seguimiento?");
+                                    String comida = scanner.nextLine();
+                                    switch (comida.toLowerCase()) {
+                                        case "carne":
+                                            System.out.println("La cantidad de carne disponible es: " + Recursos.comida.CARNE.getCantidad());
+                                            break;
+                                        case "pescado":
+                                            System.out.println("La cantidad de pescado disponible es: " + Recursos.comida.PESCADO.getCantidad());
+                                            break;
+                                        case "fruta":
+                                            System.out.println("La cantidad de fruta disponible es: " + Recursos.comida.FRUTA.getCantidad());
+                                            break;
+                                        default:
+                                            System.out.println("Comida no reconocida, elije otra opción.");
+                                            break;
+                                    }
+                                    break;
+                                case "medicinas":
+                                    System.out.println("Los recursos de medicinas disponibles son: Ibuprofeno, Morfina, Ivermectina");
+                                    System.out.println("¿De qué recurso de medicinas quieres hacer el seguimiento?");
+                                    String medicina = scanner.nextLine();
+                                    switch (medicina.toLowerCase()) {
+                                        case "ibuprofeno":
+                                            System.out.println("La cantidad de ibuprofeno disponible es: " + Recursos.medicinas.IBUPROFENO.getCantidad());
+                                            System.out.println("El uso del ibuprofeno es: " + Recursos.medicinas.IBUPROFENO.getUso());
+                                            System.out.println("El ibuprofeno es: " + Recursos.medicinas.IBUPROFENO.getTipo());
+                                            break;
+                                        case "morfina":
+                                            System.out.println("La cantidad de morfina disponible es: " + Recursos.medicinas.MORFINA.getCantidad());
+                                            System.out.println("El uso de la morfina es: " + Recursos.medicinas.MORFINA.getUso());
+                                            System.out.println("La morfina es: " + Recursos.medicinas.MORFINA.getTipo());
+                                            break;
+                                        case "ivermectina":
+                                            System.out.println("La cantidad de ivermectina disponible es: " + Recursos.medicinas.IVERMECTINA.getCantidad());
+                                            System.out.println("El uso de la ivermectina es: " + Recursos.medicinas.IVERMECTINA.getUso());
+                                            System.out.println("La ivermectina es: " + Recursos.medicinas.IVERMECTINA.getTipo());
+                                            break;
+                                        default:
+                                            System.out.println("Medicina no reconocida, elije otra opción.");
+                                            break;
+                                    }
+                                    break;
+                                case "juguetes":
+                                    System.out.println("Los recursos de juguetes disponibles son: Rueda, Pelota, Cuerda");
+                                    System.out.println("¿De qué recurso de juguetes quieres hacer el seguimiento?");
+                                    String juguete = scanner.nextLine();
+                                    switch (juguete.toLowerCase()) {
+                                        case "rueda":
+                                            System.out.println("La cantidad de ruedas disponible es: " + Recursos.juguetes.RUEDA.getCantidad());
+                                            break;
+                                        case "pelota":
+                                            System.out.println("La cantidad de pelotas disponible es: " + Recursos.juguetes.PELOTA.getCantidad());
+                                            break;
+                                        case "cuerda":
+                                            System.out.println("La cantidad de cuerdas disponible es: " + Recursos.juguetes.CUERDA.getCantidad());
+                                            break;
+                                        default:
+                                            System.out.println("Juguete no reconocido, elije otra opción.");
+                                            break;
+                                    }
+                                    break;
+                                default:
+                                    System.out.println("Recurso no reconocido, elije otra opción.");
+                                    break;
+                            }
 
 
                         case "salir":
@@ -177,7 +248,7 @@ public class Main {
                             System.out.println("Hábitat no reconocido, elije otra opción.");
                             break;
                     }
-                    System.out.println("¿Quieres hacer seguimiento de otro hábitat? (si/no)");
+                    System.out.println("¿Quieres hacer seguimiento de otra opcion? (si/no)");
                     continuar = scanner.nextLine();
                 } while (continuar.equalsIgnoreCase("si"));
             } else if (staffChoice.equalsIgnoreCase("seguridad")) {
@@ -186,11 +257,6 @@ public class Main {
                 // System.out.println("Estado del león: " + Mamifero.LEON.getEstado());
                 // System.out.println("Condiciones del hábitat del león: " + Habitat.LEON.getCondiciones());
                 // Repite esto para cada animal y hábitat
-            } else if (staffChoice.equalsIgnoreCase("mantenimiento")) {
-                // Aquí necesitarás llamar a los métodos que realizan tareas de mantenimiento
-                // Por ejemplo:
-                // Mamifero.LEON.realizarMantenimiento();
-                // Repite esto para cada animal
             } else {
                 System.out.println("Opción no reconocida.");
             }

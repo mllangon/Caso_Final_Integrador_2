@@ -2,7 +2,7 @@ package Habitats;
 
 public class Hab_Acuatico extends Habitat {
     public static final Hab_Acuatico ZONA_1 = new Hab_Acuatico(16, 80, true, 100, 35, 200);
-    public static final Hab_Acuatico ZONA_2 = new Hab_Acuatico(12, 70, true, 200, 30, 2200);
+    public static final Hab_Acuatico ZONA_2 = new Hab_Acuatico(12, 70, true, 200, 30, 200);
     public static final Hab_Acuatico ZONA_3 = new Hab_Acuatico(15, 90, true, 300, 25, 300);
     public static final Hab_Acuatico ZONA_4 = new Hab_Acuatico(15, 80, true, 400, 20, 250);
     public static final Hab_Acuatico ZONA_5 = new Hab_Acuatico(5, 70, true, 500, 25, 300);

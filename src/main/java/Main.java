@@ -537,19 +537,16 @@ public class Main {
                                 System.out.println("¡Vamos a ver a la mariposa rosa! Está en la zona 2, ahí la podéis ver.");
                                 Insectos.MARIPOSA_R.dormir();
                                 Insectos.MARIPOSA_R.comportarse();
-                                break;
-                            case "mariposa azul":
-                                System.out.println("¡Vamos a ver a la mariposa azul! Está en la zona 3, ahí la podéis ver.");
                                 Insectos.MARIPOSA_A.moverse();
                                 Insectos.MARIPOSA_A.comportarse();
                                 break;
                             case "escarabajo":
-                                System.out.println("¡Vamos a ver al escarabajo! Está en la zona 4, ahí le podéis ver.");
+                                System.out.println("¡Vamos a ver al escarabajo! Está en la zona 3, ahí le podéis ver.");
                                 Insectos.ESCARABAJO.moverse();
                                 Insectos.ESCARABAJO.comportarse();
                                 break;
                             case "hormiga bala":
-                                System.out.println("¡Vamos a ver a la hormiga bala! Está en la zona 5, ahí la podéis ver.");
+                                System.out.println("¡Vamos a ver a la hormiga bala! Está en la zona 4, ahí la podéis ver.");
                                 Insectos.HORMIGA_B.comer();
                                 Insectos.HORMIGA_B.comportarse();
                                 break;

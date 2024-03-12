@@ -25,7 +25,7 @@ public class Main {
             // Aquí necesitarás llamar a los métodos correspondientes para proporcionar acceso
             System.out.println("Acceso a todos los datos proporcionado.");
         } else if (userType.equalsIgnoreCase("Visitante")) {
-            System.out.println("Elige un guía: niños, mamíferos, aves, acuáticos, herpetario o insectos.");
+            System.out.println("Elige un guía: niños, mamíferos, aves, acuáticos, herpetario, insectos, o escribe 'salir' para terminar.");
             String guiaElegida = scanner.nextLine();
 
             switch (guiaElegida.toLowerCase()) {
@@ -178,6 +178,7 @@ public class Main {
                             System.out.println("Animal no reconocido, elije otra opción.");
                             break;
                     }
+                    break;
                 case "herpetario":
                     GuiaHerpetario guiaHerpetario = new GuiaHerpetario();
                     guiaHerpetario.ofrecerGuia();
@@ -225,6 +226,7 @@ public class Main {
                             System.out.println("Animal no reconocido, elije otra opción.");
                             break;
                     }
+                    break;
                 case "insectos":
                     GuiaInsectos guiaInsectos = new GuiaInsectos();
                     guiaInsectos.ofrecerGuia();
@@ -260,6 +262,9 @@ public class Main {
                             System.out.println("Insecto no reconocido, elije otra opción.");
                             break;
                     }
+                    break;
+                case "salir":
+                    System.out.println("¡Hasta luego!");
                     break;
                 default:
                     System.out.println("Guía no reconocida.");

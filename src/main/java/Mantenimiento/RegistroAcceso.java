@@ -1,6 +1,14 @@
 package Mantenimiento;
 
 public class RegistroAcceso {
+    public static final RegistroAcceso ENTRADA;
+    public static final RegistroAcceso SALIDA;
+
+    static {
+        ENTRADA = new RegistroAcceso();
+        SALIDA = new RegistroAcceso();
+    }
+
     private String usuario;
     private String horaEntrada;
     private String horaSalida;
@@ -36,11 +44,5 @@ public class RegistroAcceso {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
-    }
-
-    public static class RayosX {
-    }
-
-    public static class Camaras {
     }
 }

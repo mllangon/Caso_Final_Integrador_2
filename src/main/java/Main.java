@@ -253,6 +253,11 @@ public class Main {
                 } while (continuar.equals("si"));
 
             } else if (staffChoice.equalsIgnoreCase("seguridad")) {
+                do {
+                    System.out.println("Elige una opción de la seguridad: Rayos X, Cámaras, Registro acceso o escriba salir para terminar.");
+                    String seguridadElegida = scanner.nextLine();
+
+
 
 
             } else {

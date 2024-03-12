@@ -6,7 +6,12 @@ public class RegistroAcceso {
 
     static {
         ENTRADA = new RegistroAcceso();
+        ENTRADA.setHoraEntrada("10:00");
+        ENTRADA.setUsuario("Acceso permitidp");
         SALIDA = new RegistroAcceso();
+        SALIDA.setHoraSalida("19:00");
+        SALIDA.setUsuario("Acceso permitido");
+
     }
 
     private String usuario;

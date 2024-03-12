@@ -16,7 +16,9 @@ import Habitats.Hab_Acuatico;
 import Habitats.Hab_Aviario;
 import Habitats.Hab_Herpetario;
 import Habitats.Hab_Insectario;
-
+import Mantenimiento.Camara;
+import Mantenimiento.RayosX;
+import Mantenimiento.RegistroAcceso;
 
 public class Main {
     public static void main(String[] args) {
@@ -257,8 +259,69 @@ public class Main {
                     System.out.println("Elige una opción de la seguridad: Rayos X, Cámaras, Registro acceso o escriba salir para terminar.");
                     String seguridadElegida = scanner.nextLine();
 
-
-
+                    switch (seguridadElegida.toLowerCase()) {
+                        case "rayos x":
+                            System.out.println("Las zonas de los rayos X son: Entrada, Salida");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            String zonaRayosX = scanner.nextLine();
+                            switch (zonaRayosX.toLowerCase()) {
+                                case "entrada":
+                                    System.out.println("El estado de la zona de entrada es: " + RayosX.ENTRADA.getEstado());
+                                    break;
+                                case "salida":
+                                    System.out.println("El estado de la zona de salida es: " + RayosX.SALIDA.getEstado());
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "cámaras":
+                            System.out.println("Las zonas de las cámaras son: Interior, Exterior");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            String zonaCamara = scanner.nextLine();
+                            switch (zonaCamara.toLowerCase()) {
+                                case "interior":
+                                    System.out.println("El estado de la zona interior es: " + Camara.INTERIOR.getEstado());
+                                    break;
+                                case "exterior":
+                                    System.out.println("El estado de la zona exterior es: " + Camara.EXTERIOR.getEstado());
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "registro acceso":
+                            System.out.println("Las zonas del registro de acceso son: Entrada, Salida");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            String zonaRegistro = scanner.nextLine();
+                            switch (zonaRegistro.toLowerCase()) {
+                                case "entrada":
+                                    System.out.println("El usuario que ha entrado es: " + RegistroAcceso.ENTRADA.getUsuario());
+                                    System.out.println("La hora de entrada es: " + RegistroAcceso.ENTRADA.getHoraEntrada());
+                                    System.out.println("La ubicación de entrada es: " + RegistroAcceso.ENTRADA.getUbicacion());
+                                    break;
+                                case "salida":
+                                    System.out.println("El usuario que ha salido es: " + RegistroAcceso.SALIDA.getUsuario());
+                                    System.out.println("La hora de salida es: " + RegistroAcceso.SALIDA.getHoraSalida());
+                                    System.out.println("La ubicación de salida es: " + RegistroAcceso.SALIDA.getUbicacion());
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "salir":
+                            System.out.println("Saliendo...");
+                            break;
+                        default:
+                            System.out.println("Opción no reconocida.");
+                            break;
+                    }
+                    System.out.println("¿Quieres hacer seguimiento de otra opcion? (si/no)");
+                    continuar = scanner.nextLine();
+                } while (continuar.equals("si"));
 
             } else {
                 System.out.println("Opción no reconocida.");

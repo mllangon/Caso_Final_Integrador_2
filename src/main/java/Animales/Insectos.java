@@ -2,6 +2,7 @@ package Animales;
 
 public class Insectos extends Animales {
 
+
     public Insectos(String  nombre, int edad, String salud, String alimentacion, String comportamiento) {
         super(nombre, edad, salud, alimentacion, comportamiento);
     }

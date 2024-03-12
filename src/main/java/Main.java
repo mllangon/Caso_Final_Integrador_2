@@ -181,10 +181,85 @@ public class Main {
                 case "herpetario":
                     GuiaHerpetario guiaHerpetario = new GuiaHerpetario();
                     guiaHerpetario.ofrecerGuia();
+                    System.out.println("En ese caso iremos al edificio 4, donde se encuentran los reptiles y anfibios. ¿Qué animal querrías ver? (Serpientes, Cocodrilos, Ranas, Salamandras, Tritones, Tortugas o Camaleones)");
+                    String herpetario = scanner.nextLine();
+                    switch (herpetario.toLowerCase()) {
+                        case "serpientes":
+                            System.out.println("¡Vamos a ver a las serpientes! Están en la zona 1, ahí les podéis ver.");
+                            Reptiles.SERPIENTE.moverse();
+                            Reptiles.SERPIENTE.comportarse();
+                            break;
+                        case "cocodrilos":
+                            System.out.println("¡Vamos a ver a los cocodrilos! Están en la zona 2, ahí les podéis ver.");
+                            Reptiles.COCODRILO.comer();
+                            Reptiles.COCODRILO.comportarse();
+                            break;
+                        case "ranas":
+                            System.out.println("¡Vamos a ver a las ranas! Están en la zona 3, ahí les podéis ver.");
+                            Anfibios.RANA.moverse();
+                            Anfibios.RANA.comportarse();
+                            break;
+                        case "salamandras":
+                            System.out.println("¡Vamos a ver a las salamandras! Están en la zona 4, ahí les podéis ver.");
+                            Anfibios.SALAMANDRA.comer();
+                            Anfibios.SALAMANDRA.comportarse();
+                            break;
+                        case "tritones":
+                            System.out.println("¡Vamos a ver a los tritones! Están en la zona 5, ahí les podéis ver.");
+                            Anfibios.TRITON.moverse();
+                            Anfibios.TRITON.comportarse();
+                            break;
+                        case "tortugas":
+                            System.out.println("¡Vamos a ver a las tortugas! Están en la zona 6, ahí les podéis ver.");
+                            Reptiles.TORTUGA_M.comer();
+                            Reptiles.TORTUGA_H.dormir();
+                            Reptiles.TORTUGA_M.comportarse();
+                            Reptiles.TORTUGA_H.comportarse();
                     break;
+                        case "camaleones":
+                            System.out.println("¡Vamos a ver a los camaleones! Están en la zona 7, ahí les podéis ver.");
+                            Reptiles.CAMALEON.moverse();
+                            Reptiles.CAMALEON.comportarse();
+                            break;
+                        default:
+                            System.out.println("Animal no reconocido, elije otra opción.");
+                            break;
+                    }
                 case "insectos":
                     GuiaInsectos guiaInsectos = new GuiaInsectos();
                     guiaInsectos.ofrecerGuia();
+                    System.out.println("En ese caso iremos al edificio 5, donde se encuentran los insectos. ¿Qué insecto querrías ver? (Viuda negra, Mariposa rosa, Mariposa azul, Escarabajo, Hormiga bala)");
+                    String insecto = scanner.nextLine();
+                    switch (insecto.toLowerCase()) {
+                        case "viuda negra":
+                            System.out.println("¡Vamos a ver a la viuda negra! Está en la zona 1, ahí la podéis ver.");
+                            Insectos.VIUDA_NEGRA.comer();
+                            Insectos.VIUDA_NEGRA.comportarse();
+                            break;
+                        case "mariposa rosa":
+                            System.out.println("¡Vamos a ver a la mariposa rosa! Está en la zona 2, ahí la podéis ver.");
+                            Insectos.MARIPOSA_R.dormir();
+                            Insectos.MARIPOSA_R.comportarse();
+                            break;
+                        case "mariposa azul":
+                            System.out.println("¡Vamos a ver a la mariposa azul! Está en la zona 3, ahí la podéis ver.");
+                            Insectos.MARIPOSA_A.moverse();
+                            Insectos.MARIPOSA_A.comportarse();
+                            break;
+                        case "escarabajo":
+                            System.out.println("¡Vamos a ver al escarabajo! Está en la zona 4, ahí le podéis ver.");
+                            Insectos.ESCARABAJO.moverse();
+                            Insectos.ESCARABAJO.comportarse();
+                            break;
+                        case "hormiga bala":
+                            System.out.println("¡Vamos a ver a la hormiga bala! Está en la zona 5, ahí la podéis ver.");
+                            Insectos.HORMIGA_B.comer();
+                            Insectos.HORMIGA_B.comportarse();
+                            break;
+                        default:
+                            System.out.println("Insecto no reconocido, elije otra opción.");
+                            break;
+                    }
                     break;
                 default:
                     System.out.println("Guía no reconocida.");

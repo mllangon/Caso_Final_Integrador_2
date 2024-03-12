@@ -99,11 +99,85 @@ public class Main {
                     guiaAves.ofrecerGuia();
                     System.out.println("En ese caso iremos al edificio 2, donde se encuentran las aves. ¿Qué ave querrías ver? (Águilas, Pavos Reales, Flamencoso Halcones)");
                     String ave = scanner.nextLine();
+                    switch (ave.toLowerCase()) {
+                        case "águilas":
+                            System.out.println("¡Vamos a ver a las águilas! Están en la zona 1, ahí les podéis ver.");
+                            Aves.AGUILA_M.moverse();
+                            Aves.AGUILA_H.comer();
+                            Aves.AGUILA_M.comportarse();
+                            Aves.AGUILA_H.comportarse();
+                            Aves.AGUILA_M.tipoPlumas();
+                            Aves.AGUILA_H.tipoPlumas();
+                            break;
+                        case "pavos reales":
+                            System.out.println("¡Vamos a ver a los pavos reales! Están en la zona 2, ahí les podéis ver.");
+                            Aves.PAVO_REAL_M.comer();
+                            Aves.PAVO_REAL_H.dormir();
+                            Aves.PAVO_REAL_M.comportarse();
+                            Aves.PAVO_REAL_H.comportarse();
+                            Aves.PAVO_REAL_M.tipoPlumas();
+                            Aves.PAVO_REAL_H.tipoPlumas();
+                            break;
+                        case "flamencos":
+                            System.out.println("¡Vamos a ver a los flamencos! Están en la zona 3, ahí les podéis ver.");
+                            Aves.FLAMENCO_M.moverse();
+                            Aves.FLAMENCO_H.moverse();
+                            Aves.FLAMENCO_M.comportarse();
+                            Aves.FLAMENCO_H.comportarse();
+                            Aves.FLAMENCO_M.tipoPlumas();
+                            Aves.FLAMENCO_H.tipoPlumas();
+                            break;
+                        case "halcones":
+                            System.out.println("¡Vamos a ver a los halcones! Están en la zona 4, ahí les podéis ver.");
+                            Aves.HALCON.moverse();
+                            Aves.HALCON.comportarse();
+                            Aves.HALCON.tipoPlumas();
+                            break;
+                        default:
+                            System.out.println("Ave no reconocida, elije otra opción.");
+                            break;
+                    }
                     break;
                 case "acuáticos":
                     GuiaAcuaticos guiaAcuaticos = new GuiaAcuaticos();
                     guiaAcuaticos.ofrecerGuia();
-                    break;
+                    System.out.println("En ese caso iremos al edificio 3, donde se encuentran los acuáticos. ¿Qué acuático querrías ver? (Tiburón, Pez payaso, Pez globo, Pez cirujano, Pez mandarín, Delfín)");
+                    String acuatico = scanner.nextLine();
+                    switch (acuatico.toLowerCase()) {
+                        case "tiburón":
+                            System.out.println("¡Vamos a ver al tiburón! Está en la zona 1, ahí le podéis ver.");
+                            Peces.TIBURON.comer();
+                            Peces.TIBURON.comportarse();
+                            break;
+                        case "pez payaso":
+                            System.out.println("¡Vamos a ver al pez payaso! Está en la zona 2, ahí le podéis ver.");
+                            Peces.PEZ_PAYASO.moverse();
+                            Peces.PEZ_PAYASO.comportarse();
+                            break;
+                        case "pez globo":
+                            System.out.println("¡Vamos a ver al pez globo! Está en la zona 3, ahí le podéis ver.");
+                            Peces.PEZ_GLOBO.moverse();
+                            Peces.PEZ_GLOBO.comportarse();
+                            break;
+                        case "pez cirujano":
+                            System.out.println("¡Vamos a ver al pez cirujano! Está en la zona 4, ahí le podéis ver.");
+                            Peces.PEZ_CIRUJANO.comer();
+                            Peces.PEZ_CIRUJANO.comportarse();
+                            break;
+                        case "pez mandarín":
+                            System.out.println("¡Vamos a ver al pez mandarín! Está en la zona 5, ahí le podéis ver.");
+                            Peces.PEZ_MANDARIN.moverse();
+                            Peces.PEZ_MANDARIN.comportarse();
+                            break;
+                        case "delfín":
+                            System.out.println("¡Vamos a ver al delfín! Está en la zona 6, ahí le podéis ver.");
+                            Peces.DELFIN.moverse();
+                            Peces.DELFIN.comportarse();
+                            break;
+                        default:
+                            System.out.println("Animal no reconocido, elije otra opción.");
+                            break;
+                    }
                 case "herpetario":
                     GuiaHerpetario guiaHerpetario = new GuiaHerpetario();
                     guiaHerpetario.ofrecerGuia();

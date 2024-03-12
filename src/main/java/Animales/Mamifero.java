@@ -25,25 +25,25 @@ public class Mamifero extends Animales {
 
     @Override
     public void comer() {
-        System.out.println(nombre + " está comiendo. Dieta: " + alimentacion);
+        System.out.println("El" +nombre + " está comiendo. Dieta: " + alimentacion);
     }
 
     @Override
     public void dormir() {
-        System.out.println(nombre + " está durmiendo.");
+        System.out.println("El" +nombre + " está durmiendo.");
     }
 
     @Override
     public void moverse() {
-        System.out.println(nombre + " se está moviendo.");
+        System.out.println("El" +nombre + " se está moviendo.");
     }
 
     @Override
     public void comportarse() {
-        System.out.println("Comportamiento de " + nombre + ": " + comportamiento);
+        System.out.println("El comportamiento de " + nombre + ": " + comportamiento);
     }
 
     public void tipoPelaje() {
-        System.out.println("Tipo de pelaje de " + nombre + ": " + tipoPelaje);
+        System.out.println("El tipo de pelaje de " + nombre + ": " + tipoPelaje);
     }
 }

@@ -250,7 +250,8 @@ public class Main {
                     }
                     System.out.println("¿Quieres hacer seguimiento de otra opcion? (si/no)");
                     continuar = scanner.nextLine();
-                } while (continuar.equalsIgnoreCase("si"));
+                } while (continuar.equals("si"));
+
             } else if (staffChoice.equalsIgnoreCase("seguridad")) {
 
                 // Por ejemplo:

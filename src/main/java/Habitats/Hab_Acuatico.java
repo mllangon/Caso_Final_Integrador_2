@@ -1,6 +1,7 @@
 package Habitats;
 
 public class Hab_Acuatico extends Habitat {
+    static final Hab_Acuatico OCEANO = new Hab_Acuatico(25, 80, true, 100, 35, 100);
     private double nivelAgua;
     private double salinidad;
     private double profundidad;

@@ -12,6 +12,12 @@ import Visitantes.GuiaAves;
 import Visitantes.GuiaHerpetario;
 import Visitantes.GuiaInsectos;
 import Visitantes.GuiaAcuaticos;
+import Habitats.Hab_Terrestre;
+import Habitats.Hab_Acuatico;
+import Habitats.Hab_Aviario;
+import Habitats.Hab_Herpetario;
+import Habitats.Hab_Insectario;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -22,27 +28,59 @@ public class Main {
         String userType = scanner.nextLine();
 
         if (userType.equalsIgnoreCase("Staff")) {
-            // Proporcionar acceso a todos los datos
-            // Aquí necesitarás llamar a los métodos correspondientes para proporcionar acceso
-            System.out.println("Acceso a todos los datos proporcionado.");
+            System.out.println("¿Deseas realizar seguimiento o mantenimiento?");
+            String staffChoice = scanner.nextLine();
+
+            if (staffChoice.equalsIgnoreCase("seguimiento")) {
+                do {
+                    System.out.println("Elige un Hábitat para hacer el seguimiento: Terrario, Acuático, Aciario, Herpetario, insectario o escriba salir para terminar.");
+                    String habitatElegido = scanner.nextLine();
+
+                    switch (habitatElegido.toLowerCase()) {
+                        case "terrario":
+                            System.out.println("Las zonas del terrario son: 1, 2, 3, 4, 5");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            int zonaTerrario = scanner.nextInt();
+                            switch (zonaTerrario) {
+                                case 1:
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Terrestre.ZONA_1.getTemperatura() + "°C, " + Hab_Terrestre.ZONA_1.getHumedad() + "% de humedad, y " + Hab_Terrestre.ZONA_1.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 2:
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Terrestre.ZONA_2.getTemperatura() + "°C, " + Hab_Terrestre.ZONA_2.getHumedad() + "% de humedad, y " + Hab_Terrestre.ZONA_2.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 3:
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Terrestre.ZONA_3.getTemperatura() + "°C, " + Hab_Terrestre.ZONA_3.getHumedad() + "% de humedad, y " + Hab_Terrestre.ZONA_3.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 4:
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Terrestre.ZONA_4.getTemperatura() + "°C, " + Hab_Terrestre.ZONA_4.getHumedad() + "% de humedad, y " + Hab_Terrestre.ZONA_4.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 5:
+                                    System.out.println("Las condiciones de la zona 5 son: " + Hab_Terrestre.ZONA_5.getTemperatura() + "°C, " + Hab_Terrestre.ZONA_5.getHumedad() + "% de humedad, y " + Hab_Terrestre.ZONA_5.isLimpieza() + " de limpieza.");
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                    }
+                }
+                // Por ejemplo:
+                // System.out.println("Estado del león: " + Mamifero.LEON.getEstado());
+                // System.out.println("Condiciones del hábitat del león: " + Habitat.LEON.getCondiciones());
+                // Repite esto para cada animal y hábitat
+            } else if (staffChoice.equalsIgnoreCase("mantenimiento")) {
+                // Aquí necesitarás llamar a los métodos que realizan tareas de mantenimiento
+                // Por ejemplo:
+                // Mamifero.LEON.realizarMantenimiento();
+                // Repite esto para cada animal
+            } else {
+                System.out.println("Opción no reconocida.");
+            }
         } else if (userType.equalsIgnoreCase("Visitante")) {
             do {
-                System.out.println("Elige un guía: niños, mamíferos, aves, acuáticos, herpetario, insectos, o escribe 'salir' para terminar.");
+                System.out.println("Elige un guía: mamíferos, aves, acuáticos, herpetario, insectos, o escribe 'salir' para terminar.");
                 String guiaElegida = scanner.nextLine();
 
                 switch (guiaElegida.toLowerCase()) {
-                    case "niños":
-                        GuiaNiños guiaNiños = new GuiaNiños();
-                        guiaNiños.ofrecerGuia();
-                        System.out.println("¿Quieres un recorrido especial por tu cumpleaños? (Sí/No)");
-                        String cumpleaños = scanner.nextLine();
-                        if (cumpleaños.equalsIgnoreCase("Sí")) {
-                            System.out.println("¡Felicidades! Te llevaremos a un recorrido especial por tu cumpleaños, Empezaremos por los Mamíferos y recorreremos todo el zoológico hasta llegar a los Insectos. ¡Disfruta tu día!");
-                        } else if (cumpleaños.equalsIgnoreCase("No")) {
-                            System.out.println("¡Disfruta tu recorrido!");
-                        } else {
-                            System.out.println("Respuesta no reconocida.");
-                        }
                     case "mamíferos":
                         GuiaMamiferos guiaMamiferos = new GuiaMamiferos();
                         guiaMamiferos.ofrecerGuia();

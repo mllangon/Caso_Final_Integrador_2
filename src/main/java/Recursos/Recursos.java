@@ -1,7 +1,7 @@
 package Recursos;
 
 
-public class Recursos {
+public abstract class Recursos {
     private String nombre;
     private String tipo;
     private int cantidad;

@@ -6,7 +6,6 @@ import Animales.Reptiles;
 import Animales.Anfibios;
 import Animales.Insectos;
 import Animales.Peces;
-import Visitantes.GuiaNiños;
 import Visitantes.GuiaMamiferos;
 import Visitantes.GuiaAves;
 import Visitantes.GuiaHerpetario;
@@ -28,12 +27,12 @@ public class Main {
         String userType = scanner.nextLine();
 
         if (userType.equalsIgnoreCase("Staff")) {
-            System.out.println("¿Deseas realizar seguimiento o mantenimiento?");
+            System.out.println("¿Deseas realizar seguimiento o seguridad?");
             String staffChoice = scanner.nextLine();
 
             if (staffChoice.equalsIgnoreCase("seguimiento")) {
                 do {
-                    System.out.println("Elige un Hábitat para hacer el seguimiento: Terrario, Acuático, Aciario, Herpetario, insectario o escriba salir para terminar.");
+                    System.out.println("Elige una opció para hacer el seguimiento:Recursos, Terrario, Acuático, Aciario, Herpetario, insectario o escriba salir para terminar.");
                     String habitatElegido = scanner.nextLine();
 
                     switch (habitatElegido.toLowerCase()) {
@@ -62,30 +61,127 @@ public class Main {
                                     break;
                             }
                             break;
-                        case "acuático":
-                            System.out.println("Las zonas del acuático son: 1, 2, 3, 4");
+                        case "aviario":
+                            System.out.println("Las zonas del aviario son: 1, 2, 3, 4");
                             System.out.println("¿De qué zona quieres hacer el seguimiento?");
-                            int zonaAcuatico = scanner.nextInt();
-                            switch (zonaAcuatico) {
+                            int zonaAviario = scanner.nextInt();
+                            switch (zonaAviario) {
                                 case 1:
-                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Acuatico.ZONA_1.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_1.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_1.isLimpieza() + " de limpieza.");
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Aviario.ZONA_1.getTemperatura() + "°C, " + Hab_Aviario.ZONA_1.getHumedad() + "% de humedad, y " + Hab_Aviario.ZONA_1.isLimpieza() + " de limpieza.");
                                     break;
                                 case 2:
-                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Acuatico.ZONA_2.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_2.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_2.isLimpieza() + " de limpieza.");
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Aviario.ZONA_2.getTemperatura() + "°C, " + Hab_Aviario.ZONA_2.getHumedad() + "% de humedad, y " + Hab_Aviario.ZONA_2.isLimpieza() + " de limpieza.");
                                     break;
                                 case 3:
-                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Acuatico.ZONA_3.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_3.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_3.isLimpieza() + " de limpieza.");
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Aviario.ZONA_3.getTemperatura() + "°C, " + Hab_Aviario.ZONA_3.getHumedad() + "% de humedad, y " + Hab_Aviario.ZONA_3.isLimpieza() + " de limpieza.");
                                     break;
                                 case 4:
-                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Acuatico.ZONA_4.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_4.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_4.isLimpieza() + " de limpieza.");
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Aviario.ZONA_4.getTemperatura() + "°C, " + Hab_Aviario.ZONA_4.getHumedad() + "% de humedad, y " + Hab_Aviario.ZONA_4.isLimpieza() + " de limpieza.");
                                     break;
                                 default:
                                     System.out.println("Zona no reconocida, elije otra opción.");
                                     break;
                             }
-                            break
+                            break;
+                        case "acuático":
+                            System.out.println("Las zonas del acuático son: 1, 2, 3, 4, 5, 6");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            int zonaAcuatico = scanner.nextInt();
+                            switch (zonaAcuatico) {
+                                case 1:
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Acuatico.ZONA_1.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_1.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_1.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_1.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_1.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_1.getProfundidad() + " de profundidad.");
+                                    break;
+                                case 2:
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Acuatico.ZONA_2.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_2.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_2.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_2.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_2.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_2.getProfundidad() + " de profundidad.");
+                                    break;
+                                case 3:
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Acuatico.ZONA_3.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_3.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_3.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_3.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_3.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_3.getProfundidad() + " de profundidad.");
+                                    break;
+                                case 4:
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Acuatico.ZONA_4.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_4.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_4.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_4.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_4.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_4.getProfundidad() + " de profundidad.");
+                                    break;
+                                case 5:
+                                    System.out.println("Las condiciones de la zona 5 son: " + Hab_Acuatico.ZONA_5.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_5.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_5.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_5.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_5.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_5.getProfundidad() + " de profundidad.");
+                                    break;
+                                case 6:
+                                    System.out.println("Las condiciones de la zona 6 son: " + Hab_Acuatico.ZONA_6.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_6.getHumedad() + "% de humedad, " + Hab_Acuatico.ZONA_6.isLimpieza() + " de limpieza, " + Hab_Acuatico.ZONA_6.getNivelAgua() + " de nivel de agua, " + Hab_Acuatico.ZONA_6.getSalinidad() + " de salinidad, y " + Hab_Acuatico.ZONA_6.getProfundidad() + " de profundidad.");
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "herpetario":
+                            System.out.println("Las zonas del herpetario son: 1, 2, 3, 4, 5, 6, 7");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            int zonaHerpetario = scanner.nextInt();
+                            switch (zonaHerpetario) {
+                                case 1:
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Herpetario.ZONA_1.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_1.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_1.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_1.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_1.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 2:
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Herpetario.ZONA_2.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_2.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_2.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_2.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_2.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 3:
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Herpetario.ZONA_3.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_3.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_3.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_3.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_3.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 4:
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Herpetario.ZONA_4.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_4.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_4.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_4.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_4.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 5:
+                                    System.out.println("Las condiciones de la zona 5 son: " + Hab_Herpetario.ZONA_5.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_5.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_5.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_5.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_5.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 6:
+                                    System.out.println("Las condiciones de la zona 6 son: " + Hab_Herpetario.ZONA_6.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_6.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_6.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_6.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_6.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                case 7:
+                                    System.out.println("Las condiciones de la zona 7 son: " + Hab_Herpetario.ZONA_7.getTemperatura() + "°C, " + Hab_Herpetario.ZONA_7.getHumedad() + "% de humedad, " + Hab_Herpetario.ZONA_7.isLimpieza() + " de limpieza, " + Hab_Herpetario.ZONA_7.getNivelUVB() + " de nivel UVB, y " + Hab_Herpetario.ZONA_7.getTipoSuelo() + " de tipo de suelo.");
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "insectario":
+                            System.out.println("Las zonas del insectario son: 1, 2, 3, 4, 5");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            int zonaInsectario = scanner.nextInt();
+                            switch (zonaInsectario) {
+                                case 1:
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Insectario.ZONA_1.getTemperatura() + "°C, " + Hab_Insectario.ZONA_1.getHumedad() + "% de humedad, " + Hab_Insectario.ZONA_1.isLimpieza() + " de limpieza, " + Hab_Insectario.ZONA_1.getNivelTierra() + " de nivel de tierra, " + Hab_Insectario.ZONA_1.getHumedadTierra() + " de humedad de tierra, y " + Hab_Insectario.ZONA_1.getProfundidadTierra() + " de profundidad de tierra.");
+                                    break;
+                                case 2:
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Insectario.ZONA_2.getTemperatura() + "°C, " + Hab_Insectario.ZONA_2.getHumedad() + "% de humedad, " + Hab_Insectario.ZONA_2.isLimpieza() + " de limpieza, " + Hab_Insectario.ZONA_2.getNivelTierra() + " de nivel de tierra, " + Hab_Insectario.ZONA_2.getHumedadTierra() + " de humedad de tierra, y " + Hab_Insectario.ZONA_2.getProfundidadTierra() + " de profundidad de tierra.");
+                                    break;
+                                case 3:
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Insectario.ZONA_3.getTemperatura() + "°C, " + Hab_Insectario.ZONA_3.getHumedad() + "% de humedad, " + Hab_Insectario.ZONA_3.isLimpieza() + " de limpieza, " + Hab_Insectario.ZONA_3.getNivelTierra() + " de nivel de tierra, " + Hab_Insectario.ZONA_3.getHumedadTierra() + " de humedad de tierra, y " + Hab_Insectario.ZONA_3.getProfundidadTierra() + " de profundidad de tierra.");
+                                    break;
+                                case 4:
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Insectario.ZONA_4.getTemperatura() + "°C, " + Hab_Insectario.ZONA_4.getHumedad() + "% de humedad, " + Hab_Insectario.ZONA_4.isLimpieza() + " de limpieza, " + Hab_Insectario.ZONA_4.getNivelTierra() + " de nivel de tierra, " + Hab_Insectario.ZONA_4.getHumedadTierra() + " de humedad de tierra, y " + Hab_Insectario.ZONA_4.getProfundidadTierra() + " de profundidad de tierra.");
+                                    break;
+                                case 5:
+                                    System.out.println("Las condiciones de la zona 5 son: " + Hab_Insectario.ZONA_5.getTemperatura() + "°C, " + Hab_Insectario.ZONA_5.getHumedad() + "% de humedad, " + Hab_Insectario.ZONA_5.isLimpieza() + " de limpieza, " + Hab_Insectario.ZONA_5.getNivelTierra() + " de nivel de tierra, " + Hab_Insectario.ZONA_5.getHumedadTierra() + " de humedad de tierra, y " + Hab_Insectario.ZONA_5.getProfundidadTierra() + " de profundidad de tierra.");
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break;
+                        case "recursos":
+
+
+                        case "salir":
+                            System.out.println("Saliendo...");
+                            break;
+                        default:
+                            System.out.println("Hábitat no reconocido, elije otra opción.");
+                            break;
                     }
-                }
+                    System.out.println("¿Quieres hacer seguimiento de otro hábitat? (si/no)");
+                    continuar = scanner.nextLine();
+                } while (continuar.equalsIgnoreCase("si"));
+            } else if (staffChoice.equalsIgnoreCase("seguridad")) {
+
                 // Por ejemplo:
                 // System.out.println("Estado del león: " + Mamifero.LEON.getEstado());
                 // System.out.println("Condiciones del hábitat del león: " + Habitat.LEON.getCondiciones());
@@ -340,4 +436,4 @@ public class Main {
             scanner.close();
         }
     }
-}
+    }

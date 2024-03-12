@@ -254,10 +254,7 @@ public class Main {
 
             } else if (staffChoice.equalsIgnoreCase("seguridad")) {
 
-                // Por ejemplo:
-                // System.out.println("Estado del león: " + Mamifero.LEON.getEstado());
-                // System.out.println("Condiciones del hábitat del león: " + Habitat.LEON.getCondiciones());
-                // Repite esto para cada animal y hábitat
+
             } else {
                 System.out.println("Opción no reconocida.");
             }

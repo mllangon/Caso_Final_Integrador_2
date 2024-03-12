@@ -37,4 +37,10 @@ public class RegistroAcceso {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
+
+    public static class RayosX {
+    }
+
+    public static class Camaras {
+    }
 }

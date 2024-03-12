@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import Visitantes.GuiaNiños;
+import Visitantes.GuiaMamiferos;
+import Visitantes.GuiaHerpetario;
+import Visitantes.GuiaInsectos;
+import Visitantes.GuiaAcuaticos;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,17 +17,33 @@ public class Main {
             // Aquí necesitarás llamar a los métodos correspondientes para proporcionar acceso
             System.out.println("Acceso a todos los datos proporcionado.");
         } else if (userType.equalsIgnoreCase("Visitante")) {
-            System.out.println("Por favor, introduce tu edad:");
-            int age = scanner.nextInt();
+            System.out.println("Elige un guía: Guía niños (Recomendado para menores de 12 y cumpleaños), Mamíferos, Acuáticos, Herpetario o Insectos. ");
+            String guiaElegida = scanner.nextLine();
 
-            if (age < 18) {
-                // Proporcionar acceso a GuiaNiños
-                // GuiaNiños.acceso();
-                System.out.println("Guia para niños proporcionado");
-            } else {
-                // Proporcionar acceso a otras guías
-                // Aquí necesitarás llamar a los métodos correspondientes para proporcionar acceso
-                System.out.println("Elige un guía: Aves, Mamíferos, Acuáticos, Herpetario o Insectos. ");
+            switch (guiaElegida.toLowerCase()) {
+                case "guía niños (recomendado para menores de 12 y cumpleaños)":
+                    GuiaNiños guiaNiños = new GuiaNiños();
+                    guiaNiños.ofrecerGuia();
+                    break;
+                case "mamíferos":
+                    GuiaMamiferos guiaMamiferos = new GuiaMamiferos();
+                    guiaMamiferos.ofrecerGuia();
+                    break;
+                case "acuáticos":
+                    GuiaAcuaticos guiaAcuaticos = new GuiaAcuaticos();
+                    guiaAcuaticos.ofrecerGuia();
+                    break;
+                case "herpetario":
+                    GuiaHerpetario guiaHerpetario = new GuiaHerpetario();
+                    guiaHerpetario.ofrecerGuia();
+                    break;
+                case "insectos":
+                    GuiaInsectos guiaInsectos = new GuiaInsectos();
+                    guiaInsectos.ofrecerGuia();
+                    break;
+                default:
+                    System.out.println("Guía no reconocida.");
+                    break;
             }
         } else {
             System.out.println("Tipo de usuario no reconocido.");

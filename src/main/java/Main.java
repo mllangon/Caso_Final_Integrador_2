@@ -166,7 +166,7 @@ public class Main {
                             break;
                         case "pez mandarín":
                             System.out.println("¡Vamos a ver al pez mandarín! Está en la zona 5, ahí le podéis ver.");
-                            Peces.PEZ_MANDARIN.moverse();
+                            Peces.PEZ_MANDARIN.dormir();
                             Peces.PEZ_MANDARIN.comportarse();
                             break;
                         case "delfín":

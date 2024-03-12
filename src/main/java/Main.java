@@ -61,6 +61,29 @@ public class Main {
                                     System.out.println("Zona no reconocida, elije otra opción.");
                                     break;
                             }
+                            break;
+                        case "acuático":
+                            System.out.println("Las zonas del acuático son: 1, 2, 3, 4");
+                            System.out.println("¿De qué zona quieres hacer el seguimiento?");
+                            int zonaAcuatico = scanner.nextInt();
+                            switch (zonaAcuatico) {
+                                case 1:
+                                    System.out.println("Las condiciones de la zona 1 son: " + Hab_Acuatico.ZONA_1.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_1.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_1.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 2:
+                                    System.out.println("Las condiciones de la zona 2 son: " + Hab_Acuatico.ZONA_2.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_2.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_2.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 3:
+                                    System.out.println("Las condiciones de la zona 3 son: " + Hab_Acuatico.ZONA_3.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_3.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_3.isLimpieza() + " de limpieza.");
+                                    break;
+                                case 4:
+                                    System.out.println("Las condiciones de la zona 4 son: " + Hab_Acuatico.ZONA_4.getTemperatura() + "°C, " + Hab_Acuatico.ZONA_4.getHumedad() + "% de humedad, y " + Hab_Acuatico.ZONA_4.isLimpieza() + " de limpieza.");
+                                    break;
+                                default:
+                                    System.out.println("Zona no reconocida, elije otra opción.");
+                                    break;
+                            }
+                            break
                     }
                 }
                 // Por ejemplo:
